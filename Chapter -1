@@ -1,0 +1,140 @@
+1 .Ramesh’s basic salary is input through the keyboard. His dearness
+allowance is 40% of basic salary, and house rent allowance is 20% of
+basic salary. Write a program to calculate his gross salary
+
+#include <stdio.h>
+
+int main() {
+    int salary, dearness_allowance,house_rent_allowance,gross;
+    printf("Enter a salary: ");
+    scanf("%d",&salary);
+    dearness_allowance = ((0.4)*salary);
+    printf("Dearness Allownace: %d\n",dearness_allowance);
+    house_rent_allowance =((0.2)*salary);
+    printf("House Rent Allownace: %d\n",house_rent_allowance);
+    gross = salary +  dearness_allowance + house_rent_allowance;
+    printf("Gross Salary: %d",gross*12);
+}
+
+
+2 .The distance been two cities (in km.) is input through the
+keyboard. Write a program to convert and print this distance in
+meters, feet, inches and centimeters.
+
+#include<stdio.h>
+int main(){
+    int distance;
+    float in_meters, in_feet, in_inches, in_centimeters;
+    printf("Enter the distance: ");
+    scanf("%d",&distance);
+    in_meters = distance * 1000;
+    printf("In Meters: %.2f\n",in_meters);
+    in_feet = distance * 3280.84;
+    printf("In Feet: %.2f\n",in_feet);
+    in_inches = distance * 39370.1;
+    printf("In Inches: %.2f\n",in_inches);
+    in_centimeters = distance * 100000;
+    printf("In Centimeter: %.2f\n",in_centimeters);
+ }
+
+3 .If the marks obtained by a student in five different subjects are
+input through the keyboard, write a program to find out the
+aggregate marks and percentage marks obtained by the student.
+Assume that the maximum marks that can be obtained by a student
+in each subject is 100.
+
+#include<stdio.h>
+int main(){
+    int mark1, mark2, mark3, mark4, mark5,total;
+    float percentage;
+    printf("Enter mark 1: ");
+    scanf("%d",&mark1);
+    printf("Enter mark 2: ");
+    scanf("%d",&mark2);
+    printf("Enter mark 3: ");
+    scanf("%d",&mark3);
+    printf("Enter mark 4: ");
+    scanf("%d",&mark4);
+    printf("Enter mark 5: ");
+    scanf("%d",&mark5);
+    total  = mark1+mark2+mark3+mark4+mark5;
+    percentage = ((total/500)*100);
+    printf("Total Marks: %d\n",total);
+    printf("Percentage: %f",percentage);
+}
+4 .Temperature of a city in Fahrenheit degrees is input through the
+keyboard. Write a program to convert this temperature into
+Centigrade degrees.
+
+
+#include <stdio.h>
+int main(){
+    int fareheit;
+    float celcius;
+    printf("Enter a farenheit: ");
+    scanf("%d",&fareheit);
+    celcius = (fareheit -32)*.5556;
+    printf("Celcuis: %.2f",celcius);
+}
+5 .The length and breadth of a rectangle and radius of a circle are
+input through the keyboard. Write a program to calculate the area
+and perimeter of the rectangle, and the area and circumference of
+the circle.
+
+#include<stdio.h>
+int main(){
+    int length,breadth;
+    float radius, area_of_rectangle,perimeter_of_rectangle,area_of_circle,circumference_of_circle;
+    printf("Enter length of rectangle: ");
+    scanf("%d",&length);
+    printf("Enter breadth of rectangle: ");
+    scanf("%d",&breadth);
+    printf("Enter radius of circle: ");
+    scanf("%f",&radius);
+    area_of_rectangle = length * breadth;
+    printf("Area of Rectangle: %.2f\n",area_of_rectangle);
+    perimeter_of_rectangle = 2*(length + breadth);
+    printf("Perimeter of Rectangle: %.2f\n",perimeter_of_rectangle);
+    area_of_circle = 3.14 * (radius * radius);
+    printf("Area Of Circle: %.2f\n",area_of_circle);
+    circumference_of_circle = 2* 3.14* radius;
+    printf("Circumference Of Circle: %.2f\n",circumference_of_circle);
+}
+6 .Paper of size A0 has dimensions 1189 mm x 841 mm. Each
+subsequent size A(n) is defined as A(n-1) cut in half parallel to its
+shorter sides. Thus paper of size A1 would have dimensions 841
+mm x 594 mm. Write a program to calculate and print paper sizes
+A0, A1, A2, … A8.
+
+#include<stdio.h>
+int main(){
+    int a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r;
+    a = 1189;
+    b = 841;
+    printf("A0: %d X %d\n",a,b);
+    c = b;
+    d = a/2;
+    printf("A1: %d X %d\n",c,d);
+    e = d;
+    f = c/2;
+    printf("A2: %d X %d\n",e,f);
+    g = f;
+    h = e/2;
+    printf("A3: %d X %d\n",g,h);
+    i = h;
+    j = g/2;
+    printf("A4: %d X %d\n",i,j);
+    k = j;
+    l = h/2;
+    printf("A5: %d X %d\n",k,l);
+    m = l;
+    n = k/2;
+    printf("A6: %d X %d\n",m,n);
+    o = n;
+    p = m/2;
+    printf("A7: %d X %d\n",o,p);
+    q = p;
+    r = o/2;
+    printf("A8: %d X %d\n",q,r);
+    
+}
